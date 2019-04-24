@@ -49,7 +49,7 @@
 解决两个问题：跨域、Session不一致问题。
 
 1. ajax请求中，加入xhrFields:{withCredentials: true}，表示携带cookie信息。
-
+非常重要：保证了前端每次请求时携带的是同一个sessionid
    ```js
    function login(){
    	$.ajax({
