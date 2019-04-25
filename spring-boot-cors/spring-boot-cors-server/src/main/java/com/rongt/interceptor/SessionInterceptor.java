@@ -42,6 +42,7 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
                 out.print(sb.toString());
                 out.close();
             }
+            //返回false不再调用其他拦截器和处理器
             return false;
         }
         return true;

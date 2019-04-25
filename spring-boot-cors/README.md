@@ -135,4 +135,16 @@
        }
    }
    ```
+5. 向MVC中注册session超时拦截器，并设置拦截路径
+```java
+@Configuration
+public class InterceptorConfig extends WebMvcConfigurerAdapter {
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        //注册登录超时拦截器，并排除拦截登录请求
+        registry.addInterceptor(new SessionInterceptor()).excludePathPatterns("/**/login");
+        super.addInterceptors(registry);
+    }
+}
+```
 
