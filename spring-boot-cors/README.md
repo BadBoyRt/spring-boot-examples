@@ -135,7 +135,7 @@
        }
    }
    ```
-5. 向MVC中注册session超时拦截器，并设置拦截路径
+5. SpringBoot框架中向MVC注册session超时拦截器，并设置拦截路径
 ```java
 @Configuration
 public class InterceptorConfig extends WebMvcConfigurerAdapter {
